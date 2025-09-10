@@ -2,7 +2,8 @@
 
 This is a **personal portfolio website** showcasing my background, skills, interests, projects, and contact details.  
 The site is built with **HTML, CSS, and JavaScript** and designed to be fully **responsive** across devices.
-## Hosted on --- ** https://mise-27.github.io/bincom_portfolio_site/**
+## Hosted on 
+**https://mise-27.github.io/bincom_portfolio_site/**
 ---
 
 ## 🚀 Features

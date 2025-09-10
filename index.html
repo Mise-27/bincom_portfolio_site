@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olajesu Tunmise | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="page-title">
+    <h1>Olajesu Tunmise's Portfolio</h1>
+  </div>
+
+  <nav aria-label="Main navigation" class="main-nav">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <ul class="navbar">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#interests">Interests</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#slideshow">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero container" role="banner">
+    <div class="hero-left">
+      <img src="Mise.png" alt="Olajesu's Profile Picture" class="hero-img" />
+    </div>
+    <div class="hero-right">
+      <h1>Olajesu (Emmanuel) Tunmise</h1>
+      <p>Data-driven problem solver passionate about AI in agriculture & tech transformation in Africa.</p>
+    </div>
+  </header>
+
+  <main role="main">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        My passion for tech is fueled by the need to solve real problems in Nigeria specifically, and Africa at large, especially in agriculture.
+        Despite its importance, the sector remains largely untouched by modern technology and AI. I’m driven by the desire to bring smart, data-driven solutions to farming—things like AI for crop monitoring, weather prediction, and efficient resource use. Beyond agriculture, I’m passionate about helping African firms integrate technology to improve their operations and stay competitive.
+      </p>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Educational Background</h2>
+      <p>
+        BSc. Chemical Engineering – Lagos State University, Ojo <br />
+        Second Class Upper Division (2025)
+      </p>
+      <a href="Tunmise_Olajesu_CV.pdf" class="btn" download>📄 Download CV</a>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Programming Languages</h2>
+      <ul class="skills">
+        <li>Python</li>
+        <li>SQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="interests" class="section">
+      <h2>Interests</h2>
+      <ul>
+        <li><strong>Artificial Intelligence:</strong> Building intelligent systems to address real-world challenges.</li>
+        <li><strong>Data Science:</strong> Leveraging data for smarter decision-making.</li>
+        <li><strong>Software Development:</strong> Crafting practical, innovative tools.</li>
+        <li><strong>Web Development:</strong> Creating modern, responsive apps with good UX.</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project">
+        <h3>Stock Data Analysis</h3>
+        <p>IBM class project that compares GameStop and Tesla stock data using Python and pandas.</p>
+        <a href="https://github.com/Mise-27/IBM-Data-Science-Projects" target="_blank" class="project-btn">🔗 View Project</a>
+      </div>
+      <div style="height: 30px;"></div>
+      <div class="project">
+        <h3>Python Calculator</h3>
+        <p>Simple calculator built with Python for a PLP Academy assignment.</p>
+        <a href="https://github.com/Mise-27/PLP-Academy-Assignments" target="_blank" class="project-btn">🔗 View Project</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required aria-label="Your Name">
+        <input type="email" placeholder="Your Email" required aria-label="Your Email">
+        <textarea placeholder="Please, type in your message" rows="5" required aria-label="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="socials">
+        <a href="mailto:olajesusemi027@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://github.com/Mise-27" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://linkedin.com/in/tunmise-olajesu-820baa248" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://wa.me/2349021949942" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: +234 902 194 9942</a>
+        <a href="tel:+2349021949942"><i class="fas fa-phone"></i> Call: +234 902 194 9942</a>
+      </div>
+    </section>
+
+    <section id="slideshow" class="section">
+      <h2>Gallery</h2>
+      <div class="slideshow-container">
+        <button id="prev-btn" aria-label="Previous photo">&#10094;</button>
+        <img id="slideshow-img" src="pic1.jpg" alt="Slideshow Image" class="slideshow-img" />
+        <button id="next-btn" aria-label="Next photo">&#10095;</button>
+      </div>
+      <div id="slideshow-caption" class="slideshow-caption"></div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 Olajesu Tunmise Portfolio.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

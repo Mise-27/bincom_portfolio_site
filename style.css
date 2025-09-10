@@ -1,0 +1,496 @@
+/* === Google Fonts: Poppins === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* === Reset default spacing and box-sizing for consistency across browsers === */
+* {
+  margin: 0;                
+  padding: 0;               
+  box-sizing: border-box;  
+}
+
+/* === Base body styles: background, font, and text color for the whole page === */
+body {
+  background: linear-gradient(to bottom, #f0f4f8, #dbeafe); 
+  font-family: 'Poppins', 'Segoe UI', sans-serif;           
+  color: #1e293b;                                          
+  line-height: 1.6;                                         
+  min-height: 100vh;                                        
+}
+
+/* === MODERN GLASSY NAVIGATION BAR === */
+.main-nav {
+  position: sticky;                
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(30, 58, 138, 0.85); 
+  backdrop-filter: blur(8px);          
+  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.10); 
+  border-radius: 0 0 18px 18px;      
+  margin-bottom: 0;
+}
+
+/* === Navigation list: horizontal on desktop === */
+.navbar {
+  list-style: none;         
+  display: flex;            
+  justify-content: center;  
+  align-items: center;
+  gap: 36px;                
+  margin: 0;
+  padding: 0;
+  min-height: 64px;
+  transition: all 0.3s;
+}
+
+/* === Navigation list item === */
+.navbar li {
+  position: relative;
+}
+
+/* === Navigation links: style and hover/focus effects === */
+.navbar li a {
+  color: #f1f5fa;           
+  text-decoration: none;   
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 10px 22px;
+  border-radius: 8px;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Navigation link hover/focus/active: highlight and animate === */
+.navbar li a:hover,
+.navbar li a:focus {
+  background: linear-gradient(90deg, #3b82f6 60%, #1e40af 100%); 
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.18);              
+  transform: translateY(-2px) scale(1.06);                       
+  outline: none;
+}
+
+.navbar li a:active {
+  background: #1e40af;      
+  color: #fff;
+}
+
+/* === Hamburger menu input: hidden by default === */
+.nav-toggle {
+  display: none;
+}
+
+/* === Hamburger icon label: hidden on desktop, shown on mobile === */
+.nav-toggle-label {
+  display: none;
+  position: absolute;
+  right: 24px;
+  top: 18px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* === Hamburger icon bars === */
+.nav-toggle-label span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #f1f5fa;      
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* === Page Title Block: big, bold, and centered === */
+.page-title {
+  background: #1e3a8a;      
+  padding: 32px 20px 24px 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 12px rgba(30, 58, 138, 0.10); 
+  letter-spacing: 1px;
+}
+
+.page-title h1 {
+  font-size: 2.5rem;        
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+/* === .container: Centers content and limits its width === */
+.container {
+  max-width: 1200px;        
+  margin: auto;             
+  padding: 20px;
+}
+
+/* === header.hero: Top hero section with image and intro === */
+header.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 40px 20px;
+  background: linear-gradient(120deg, #f1f5f9 60%, #dbeafe 100%); 
+  border-bottom: none;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.08); 
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 24px;
+}
+
+/* === .hero-img: Profile image styling === */
+.hero-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;       
+  object-fit: cover;
+  border: 5px solid #3b82f6; 
+  margin-bottom: 24px;
+  box-shadow: 0 4px 24px rgba(59, 130, 246, 0.10); 
+}
+
+/* === .hero-right h1: Name in hero section === */
+.hero-right h1 {
+  font-size: 2.3rem;
+  color: #1e3a8a;            
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* === .hero-right p: Intro text in hero section === */
+.hero-right p {
+  font-size: 1.15rem;
+  color: #334155;            
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* === .section: Card-like sections for main content === */
+.section {
+  background: #fff;
+  margin: 48px auto;
+  padding: 40px 32px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.10); 
+  max-width: 900px;
+  transition: box-shadow 0.3s;
+}
+
+.section:hover {
+  box-shadow: 0 12px 40px rgba(30, 58, 138, 0.16); 
+}
+
+/* === .section h2: Section headings === */
+.section h2 {
+  color: #1e40af;            
+  margin-bottom: 18px;
+  font-size: 2rem;
+  border-left: 6px solid #3b82f6; 
+  padding-left: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* === .section p, .section li: Paragraphs and list items === */
+.section p,
+.section li {
+  font-size: 1.08rem;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+/* === .skills: Stylish skill badges === */
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.skills li {
+  background: linear-gradient(90deg, #3b82f6 60%, #1e40af 100%); 
+  color: white;
+  padding: 10px 20px;
+  border-radius: 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.10); 
+  letter-spacing: 0.5px;
+}
+
+/* === .btn, button[type="submit"], .project-btn: Modern buttons === */
+.btn,
+button[type="submit"],
+.project-btn {
+  background: linear-gradient(90deg, #2563eb 60%, #1e40af 100%); /* Blue gradient */
+  color: #fff !important;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-block;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.10); 
+  font-size: 1rem;
+}
+
+.btn:hover,
+button[type="submit"]:hover,
+.project-btn:hover {
+  background: #1e40af;       
+  transform: translateY(-2px) scale(1.03); 
+}
+
+/* === Project Cards: Each project in its own card === */
+.project {
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30, 58, 138, 0.07); 
+  padding: 24px 20px;
+  margin-bottom: 28px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.project:hover {
+  box-shadow: 0 6px 24px rgba(30, 58, 138, 0.13); 
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* === form: Stylish contact form === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+input,
+textarea {
+  padding: 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border: 1.5px solid #3b82f6; 
+  outline: none;
+}
+
+/* === .socials: Social/contact links === */
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: flex-start;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+}
+
+.socials a i {
+  color: #3b82f6;
+  font-size: 1.2em;
+}
+
+.socials a:hover {
+  color: #2563eb; 
+}
+
+/* === footer: Polished footer === */
+footer {
+  background: #1e3a8a;
+  color: #f8fafc;
+  text-align: center;
+  padding: 28px 10px 18px 10px;
+  margin-top: 60px;
+  font-size: 1rem;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -2px 12px rgba(30, 58, 138, 0.08);
+}
+
+/* === Slideshow styles === */
+.slideshow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  max-width: 500px;
+  margin: 0 auto 24px auto;
+  text-align: center;
+}
+
+.slideshow-img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(30,58,138,0.10);
+  border: 4px solid #3b82f6;
+  background: #f8fafc;
+}
+
+.slideshow-container button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(30,58,138,0.10);
+}
+
+.slideshow-container button:hover {
+  background: #1e40af;
+  transform: scale(1.1);
+}
+
+.slideshow-caption {
+  margin-top: 10px;
+  color: #1e3a8a;
+  font-weight: 500;
+  font-size: 1.08rem;
+  text-align: center;
+}
+
+/* === Section fade-in animation === */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* === Responsive Improvements: layout and nav for mobile === */
+@media (min-width: 700px) {
+  header.hero {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 48px;
+    text-align: left;
+  }
+  .hero-right {
+    flex: 1;
+    text-align: left;
+  }
+  .section {
+    padding: 48px 56px;
+  }
+  .skills {
+    justify-content: flex-start;
+  }
+  .socials {
+    align-items: flex-end;
+  }
+}
+
+/* === Responsive: collapse nav to hamburger on small screens === */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column; 
+    align-items: flex-start;
+    background: rgba(30, 58, 138, 0.97);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 24px 0 16px 0;
+    gap: 0;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 8px 32px rgba(30, 58, 138, 0.13);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+  }
+  .navbar li {
+    width: 100%;
+    text-align: left;
+    margin: 0;
+  }
+  .navbar li a {
+    display: block;
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    border-radius: 0;
+    border-left: 4px solid transparent;
+    transition: background 0.18s, color 0.18s, border 0.18s;
+  }
+  .navbar li a:hover,
+  .navbar li a:focus {
+    background: #3b82f6;
+    color: #fff;
+    border-left: 4px solid #1e40af;
+    transform: none;
+  }
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    right: 24px;
+    top: 18px;
+    width: 36px;
+    height: 36px;
+    opacity: 0;
+    z-index: 201;
+  }
+  .nav-toggle-label {
+    display: flex;
+  }
+  .main-nav {
+    position: relative;
+  }
+  .nav-toggle:checked ~ .navbar {
+    max-height: 500px;
+    transition: max-height 0.4s;
+  }
+  /* Hamburger animation: turns into X when open */
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* === Extra spacing below nav for mobile === */
+@media (max-width: 900px) {
+  .page-title {
+    padding-bottom: 12px;
+  }
+}
